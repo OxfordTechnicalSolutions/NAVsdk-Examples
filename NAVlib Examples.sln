@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NAVdisplayPlugins", "NAVdisplayPlugins", "{7BA49050-96A2-4E39-A271-7B20D7995EA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavLibWPFExample", "NAVdisplayPlugins\NavLibWPFExample\NavLibWPFExample\NavLibWPFExample.csproj", "{E05C2A74-E3C1-4807-AAEB-5F27396CBF45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayDataStoreStreamInfo", "NAVdisplayPlugins\DisplayDataStore\DisplayDataStoreStreamInfo.csproj", "{FC8B96DD-D32B-4F8C-92A5-B5FEC3B156B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileBasedStreams", "FileBasedStreams", "{908220DB-B0DE-42CF-8F6D-786F0D3E6176}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RealtimeStreams", "RealtimeStreams", "{FD5418C9-FC47-46CC-8301-F371FAF0FE1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingFiles", "FileBasedStreams\AddingFiles\AddingFiles.csproj", "{C180A046-6627-4F74-A958-99EE0439D555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodingFileData", "FileBasedStreams\DecodingFileData\DecodingFileData.csproj", "{6C3B7960-FE50-4A77-81BF-942D19DCDB64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodingFileDataDirect", "FileBasedStreams\DecodingFileDataDirect\DecodingFileDataDirect.csproj", "{667737C3-D9DA-4BFE-BBFC-ECF2FB4BF1A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetDirectMeasurements", "RealtimeStreams\GetDirectMeasurements\GetDirectMeasurements.csproj", "{2512C045-BA81-4048-BEF8-DD8223C83CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetHistoryData", "RealtimeStreams\GetHistoryData\GetHistoryData.csproj", "{E8A9037B-119D-4F3D-9C5D-D0B71E1953F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamsTransports", "RealtimeStreams\StreamsTransports\StreamsTransports.csproj", "{A122A625-2CB8-4E55-A406-D5EF6AE9F6A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E05C2A74-E3C1-4807-AAEB-5F27396CBF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E05C2A74-E3C1-4807-AAEB-5F27396CBF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E05C2A74-E3C1-4807-AAEB-5F27396CBF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E05C2A74-E3C1-4807-AAEB-5F27396CBF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8B96DD-D32B-4F8C-92A5-B5FEC3B156B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8B96DD-D32B-4F8C-92A5-B5FEC3B156B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8B96DD-D32B-4F8C-92A5-B5FEC3B156B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8B96DD-D32B-4F8C-92A5-B5FEC3B156B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C180A046-6627-4F74-A958-99EE0439D555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C180A046-6627-4F74-A958-99EE0439D555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C180A046-6627-4F74-A958-99EE0439D555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C180A046-6627-4F74-A958-99EE0439D555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3B7960-FE50-4A77-81BF-942D19DCDB64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3B7960-FE50-4A77-81BF-942D19DCDB64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3B7960-FE50-4A77-81BF-942D19DCDB64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3B7960-FE50-4A77-81BF-942D19DCDB64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667737C3-D9DA-4BFE-BBFC-ECF2FB4BF1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667737C3-D9DA-4BFE-BBFC-ECF2FB4BF1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667737C3-D9DA-4BFE-BBFC-ECF2FB4BF1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667737C3-D9DA-4BFE-BBFC-ECF2FB4BF1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2512C045-BA81-4048-BEF8-DD8223C83CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2512C045-BA81-4048-BEF8-DD8223C83CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2512C045-BA81-4048-BEF8-DD8223C83CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2512C045-BA81-4048-BEF8-DD8223C83CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A9037B-119D-4F3D-9C5D-D0B71E1953F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A9037B-119D-4F3D-9C5D-D0B71E1953F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A9037B-119D-4F3D-9C5D-D0B71E1953F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A9037B-119D-4F3D-9C5D-D0B71E1953F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A122A625-2CB8-4E55-A406-D5EF6AE9F6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A122A625-2CB8-4E55-A406-D5EF6AE9F6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A122A625-2CB8-4E55-A406-D5EF6AE9F6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A122A625-2CB8-4E55-A406-D5EF6AE9F6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E05C2A74-E3C1-4807-AAEB-5F27396CBF45} = {7BA49050-96A2-4E39-A271-7B20D7995EA1}
+		{FC8B96DD-D32B-4F8C-92A5-B5FEC3B156B0} = {7BA49050-96A2-4E39-A271-7B20D7995EA1}
+		{C180A046-6627-4F74-A958-99EE0439D555} = {908220DB-B0DE-42CF-8F6D-786F0D3E6176}
+		{6C3B7960-FE50-4A77-81BF-942D19DCDB64} = {908220DB-B0DE-42CF-8F6D-786F0D3E6176}
+		{667737C3-D9DA-4BFE-BBFC-ECF2FB4BF1A1} = {908220DB-B0DE-42CF-8F6D-786F0D3E6176}
+		{2512C045-BA81-4048-BEF8-DD8223C83CA5} = {FD5418C9-FC47-46CC-8301-F371FAF0FE1B}
+		{E8A9037B-119D-4F3D-9C5D-D0B71E1953F5} = {FD5418C9-FC47-46CC-8301-F371FAF0FE1B}
+		{A122A625-2CB8-4E55-A406-D5EF6AE9F6A1} = {FD5418C9-FC47-46CC-8301-F371FAF0FE1B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {645E5869-1AF2-494E-84B9-2A9056F1ED1A}
+	EndGlobalSection
+EndGlobal

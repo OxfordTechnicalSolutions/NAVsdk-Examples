@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OxTS.NavLib.PluginInterface</name>
+    </assembly>
+    <members>
+        <member name="M:OxTS.NavLib.PluginInterface.INavLibPlugin.GetNAVlibLicense">
+            <summary>
+            Get the used to create the plugin
+            </summary>
+            <returns>A valid NAVlib license</returns>
+        </member>
+        <member name="M:OxTS.NavLib.PluginInterface.INavLibPlugin.ConnectToDatastore(OxTS.NavLib.DataStoreManager.Interface.IRealTimeDataStoreManagerAsync)">
+            <summary>
+            Called by application to pass the datastore manager reference to the plugin
+            </summary>
+            <param name="rtds_man">Async Datastore Manager class</param>
+        </member>
+        <member name="T:OxTS.NavLib.PluginInterface.PluginTypes">
+            <summary>
+            Plugin Types
+            </summary>
+        </member>
+        <member name="F:OxTS.NavLib.PluginInterface.PluginTypes.TOTD">
+            <summary>
+            Tip of the day plugin
+            </summary>
+        </member>
+        <member name="F:OxTS.NavLib.PluginInterface.PluginTypes.Utility">
+            <summary>
+            Utility, will appear in utility menu in application
+            </summary>
+        </member>
+        <member name="T:OxTS.NavLib.PluginInterface.IPluginBase">
+            <summary>
+            Plugin base class for OxTS Applications
+            </summary>
+        </member>
+        <member name="M:OxTS.NavLib.PluginInterface.IPluginBase.GetMenuTextKey">
+            <summary>
+            Name of the plugin that will appear in within the application
+            </summary>
+            <returns>Plugin name</returns>
+        </member>
+        <member name="M:OxTS.NavLib.PluginInterface.IPluginBase.GetVersion">
+            <summary>
+            Version of the plugin that will appear in within the application
+            </summary>
+            <returns>Plugin version</returns>
+        </member>
+        <member name="P:OxTS.NavLib.PluginInterface.IPluginBase.PluginType">
+            <summary>
+            Plugin Type
+            </summary>
+        </member>
+        <member name="P:OxTS.NavLib.PluginInterface.IPluginBase.MultipleInstancesAllowed">
+            <summary>
+            Can multiple instances of the plugin be instantiated?
+            </summary>
+        </member>
+        <member name="T:OxTS.NavLib.PluginInterface.IGenericAppPlugin">
+            <summary>
+            Generic plugin interface for all OxTS applications
+            </summary>
+        </member>
+        <member name="M:OxTS.NavLib.PluginInterface.IGenericAppPlugin.LaunchPlugin">
+            <summary>
+            Display plugin
+            </summary>
+        </member>
+        <member name="T:OxTS.NavLib.PluginInterface.INAVdisplayPlugin">
+            <summary>
+            Plugin interface to NAVdisplay
+            </summary>
+        </member>
+        <member name="T:OxTS.NavLib.PluginInterface.IDockable">
+            <summary>
+            interface to inherit docking framework
+            </summary>
+        </member>
+    </members>
+</doc>
