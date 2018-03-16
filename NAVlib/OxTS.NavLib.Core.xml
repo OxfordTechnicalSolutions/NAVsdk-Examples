@@ -2077,6 +2077,17 @@
             Categories for NCOM measurements
             </summary>
     </member>
+    <member name="T:OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization">
+      <summary>
+            Detals of NAV measurements loaded from xml
+            </summary>
+    </member>
+    <member name="M:OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization.#ctor(OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization)">
+      <summary>
+            Copy Constructor
+            </summary>
+      <param name="copy">Object to copy</param>
+    </member>
     <member name="P:OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization.Name">
       <summary>
             Name of measurement
@@ -2107,9 +2118,21 @@
             Internal name
             </summary>
     </member>
+    <member name="P:OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization.DeprecatedOutputName">
+      <summary>
+             Output name used in legacy OxTS software
+             </summary>
+      <remarks>
+            This property is provided for compatibility with legacy OxTS software, for new applications use <paramname>ShortName</paramname></remarks>
+    </member>
     <member name="P:OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization.OutputFormat">
       <summary>
             Format used to display as a string
+            </summary>
+    </member>
+    <member name="P:OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization.AdditionalDescription">
+      <summary>
+            Additional description for measurement, append to the end of <paramref>Description</paramref> for extended details.
             </summary>
     </member>
     <member name="P:OxTS.NavLib.MeasurementCategorisation.NavMeasurementCategorization.Category">
@@ -2244,20 +2267,16 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.SerialNumber">
-      <summary>
-      </summary>
+      <summary>Serial Number</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OsVersion1">
-      <summary>
-      </summary>
+      <summary>Operating System Version 0</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OsVersion2">
-      <summary>
-      </summary>
+      <summary>Operating System Version 1</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OsVersion3">
-      <summary>
-      </summary>
+      <summary>Operating System Version 2</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuType">
       <summary>IMU2 (100Hz), IMU3 (250Hz), etc.</summary>
@@ -2310,7 +2329,7 @@
       <summary>Remaining space on the internal disk</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.FileSize">
-      <summary>Size of the current RD file</summary>
+      <summary>Size of current logged raw data file</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.UpTime">
       <summary>Time since power applied and system booted</summary>
@@ -2424,10 +2443,10 @@
       <summary>Position mode of the GPS receiver being used for position</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsVelMode">
-      <summary>Velocity mode of the GPS recevier being used for velocity</summary>
+      <summary>Velocity mode of the GPS receiver being used for velocity</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsAttMode">
-      <summary>Attitude (dual-antenna) mode of the GPS receivers...</summary>
+      <summary>Attitude (dual-antenna) mode of the GPS receivers</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.PDOP">
       <summary>PDOP of the GPS receiver being used for position</summary>
@@ -2439,8 +2458,7 @@
       <summary>VDOP of the GPS receiver being used for position</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsNumObs">
-      <summary>
-      </summary>
+      <summary>Number of GPS satellites tracked by the Primary GPS receiver</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Undulation">
       <summary>Current difference between the geoid and ellipsoid</summary>
@@ -2466,44 +2484,37 @@
       <summary>Configuration of the dual-antenna</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchStatus">
-      <summary>
-      </summary>
+      <summary>Heading Search Status</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchReady">
-      <summary>
-      </summary>
+      <summary>Heading Search Ready</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchInit">
-      <summary>
-      </summary>
+      <summary>Initial number of ambiguities in the heading search</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchNum">
-      <summary>
-      </summary>
+      <summary>Remaining number of ambiguities in the heading search</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchTime">
-      <summary>
-      </summary>
+      <summary>Heading Search Duration</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchConstr">
-      <summary>
-      </summary>
+      <summary>Number of constraints applied in the Heading Search</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadLockFromSearch">
-      <summary>
-      </summary>
+      <summary>Heading Search Option</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchMaster">
       <summary>Master search satellite for ambiguity resolution</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchSlave1">
-      <summary>Slave 1 seach satellite for ambiguity resolution</summary>
+      <summary>Slave 1 search satellite for ambiguity resolution</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchSlave2">
-      <summary>Slave 2 seach satellite for ambiguity resolution</summary>
+      <summary>Slave 2 search satellite for ambiguity resolution</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadSearchSlave3">
-      <summary>Slave 3 seach satellite for ambiguity resolution</summary>
+      <summary>Slave 3 search satellite for ambiguity resolution</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OmniStarFreq">
       <summary>Tracking frequency for OmniSTAR satellite</summary>
@@ -2603,7 +2614,7 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OptionSer3Baud">
-      <summary>Serail 3 baud rate</summary>
+      <summary>Serial 3 baud rate</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OptionSer3DataBits">
       <summary>
@@ -2651,28 +2662,22 @@
       <summary>Current UTC offset</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Lat">
-      <summary>
-      </summary>
+      <summary>Latitude</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Lon">
-      <summary>
-      </summary>
+      <summary>Longitude</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Alt">
-      <summary>
-      </summary>
+      <summary>Altitude</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NorthAcc">
-      <summary>
-      </summary>
+      <summary>North Position Accuracy</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.EastAcc">
-      <summary>
-      </summary>
+      <summary>East Position Accuracy</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AltAcc">
-      <summary>
-      </summary>
+      <summary>Down Position Accuracy</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Dist2d">
       <summary>Distance travelled in horizontal directions</summary>
@@ -2852,28 +2857,22 @@
       <summary>ISO 8855 vehicle system vertical (up) filtered acceleration</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Heading">
-      <summary>
-      </summary>
+      <summary>Heading</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Pitch">
-      <summary>
-      </summary>
+      <summary>Pitch</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Roll">
-      <summary>
-      </summary>
+      <summary>Roll</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadingAcc">
-      <summary>
-      </summary>
+      <summary>Heading Accuracy</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.PitchAcc">
-      <summary>
-      </summary>
+      <summary>Pitch Accuracy</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.RollAcc">
-      <summary>
-      </summary>
+      <summary>Roll Accuracy</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Track">
       <summary>
@@ -3052,108 +3051,82 @@
       <summary>Parameters for the angular acceleration filter</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnPosX">
-      <summary>
-      </summary>
+      <summary>Position X Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnPosY">
-      <summary>
-      </summary>
+      <summary>Position Y Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnPosZ">
-      <summary>
-      </summary>
+      <summary>Position Z Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnVelX">
-      <summary>
-      </summary>
+      <summary>Velocity X Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnVelY">
-      <summary>
-      </summary>
+      <summary>Velocity Y Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnVelZ">
-      <summary>
-      </summary>
+      <summary>Velocity Z Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnHeading">
-      <summary>
-      </summary>
+      <summary>Orientation Heading Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnPitch">
-      <summary>
-      </summary>
+      <summary>Orientation Pitch Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WxBias">
-      <summary>
-      </summary>
+      <summary>Gyro Bias X</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WyBias">
-      <summary>
-      </summary>
+      <summary>Gyro Bias Y</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WzBias">
-      <summary>
-      </summary>
+      <summary>Gyro Bias Z</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WxBiasAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Gyro Bias X</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WyBiasAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Gyro Bias Y</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WzBiasAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Gyro Bias Z</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WxSf">
-      <summary>
-      </summary>
+      <summary>Gyro Scale Factor X</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WySf">
-      <summary>
-      </summary>
+      <summary>Gyro Scale Factor Y</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WzSf">
-      <summary>
-      </summary>
+      <summary>Gyro Scale Factor Z</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WxSfAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Gyro Scale Factor X</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WySfAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Gyro Scale Factor Y</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WzSfAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Gyro Scale Factor Z</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AxBias">
-      <summary>
-      </summary>
+      <summary>Accelerometer Bias X</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AyBias">
-      <summary>
-      </summary>
+      <summary>Accelerometer Bias Y</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AzBias">
-      <summary>
-      </summary>
+      <summary>Accelerometer Bias Z</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AxBiasAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Accelerometer Bias X</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AyBiasAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Accelerometer Bias Y</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AzBiasAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Accelerometer Bias Z</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AxSf">
       <summary>
@@ -3180,80 +3153,62 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GAPx">
-      <summary>
-      </summary>
+      <summary>Distance to Primary GPS Antenna in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GAPy">
-      <summary>
-      </summary>
+      <summary>Distance to Primary GPS Antenna in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GAPz">
-      <summary>
-      </summary>
+      <summary>Distance to Primary GPS Antenna in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GAPxAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to Primary GPS Antenna in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GAPyAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to Primary GPS Antenna in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GAPzAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to Primary GPS Antenna in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AtH">
-      <summary>
-      </summary>
+      <summary>Heading Orientation of the GPS Antenna</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AtP">
-      <summary>
-      </summary>
+      <summary>Pitch Orientation of the GPS Antenna</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AtHAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Heading Orientation of the GPS Antenna</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AtPAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Pitch Orientation of the GPS Antenna</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.BaseLineLength">
-      <summary>
-      </summary>
+      <summary>Distance between the GPS Antennas</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.BaseLineLengthAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance between the GPS Antennas</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuMissedPkts">
-      <summary>
-      </summary>
+      <summary>Number of IMU Packets missed</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuResetCount">
-      <summary>
-      </summary>
+      <summary>Number of IMU Resets detected</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuErrorCount">
-      <summary>
-      </summary>
+      <summary>Number of IMU Errors detected</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuTemp">
       <summary>
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GPSPosReject">
-      <summary>
-      </summary>
+      <summary>Number of consecutive GPS position updates rejected</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GPSVelReject">
-      <summary>
-      </summary>
+      <summary>Number of consecutive GPS velocity updates rejected</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GPSAttReject">
-      <summary>
-      </summary>
+      <summary>Number of consecutive GPS attitude updates rejected</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsDiffChars">
       <summary>
@@ -3268,44 +3223,34 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuChars">
-      <summary>
-      </summary>
+      <summary>Characters received from the IMU by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuCharsSkipped">
-      <summary>
-      </summary>
+      <summary>Characters received from the IMU by the navigation computer but not understood by the decoder</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuPkts">
-      <summary>
-      </summary>
+      <summary>Packets received from the IMU by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.CmdChars">
-      <summary>
-      </summary>
+      <summary>Characters received on this port</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.CmdCharsSkipped">
-      <summary>
-      </summary>
+      <summary>Characters received on this port but not understood by the decoder</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.CmdPkts">
-      <summary>
-      </summary>
+      <summary>Packets received on this port</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.CmdErrors">
-      <summary>
-      </summary>
+      <summary>Errors received on this port</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Imu2VehHeading">
-      <summary>
-      </summary>
+      <summary>Heading of the vehicle in the RT co-ordinate frame</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Imu2VehPitch">
-      <summary>
-      </summary>
+      <summary>Pitch of the vehicle in the RT co-ordinate frame</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Imu2VehRoll">
-      <summary>
-      </summary>
+      <summary>Roll of the vehicle in the RT co-ordinate frame</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Veh2OutHeading">
       <summary>
@@ -3344,16 +3289,13 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Ned2SurfHeading">
-      <summary>
-      </summary>
+      <summary>Surface Angle Heading Rotation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Ned2SurfPitch">
-      <summary>
-      </summary>
+      <summary>Surface Angle Pitch Rotation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.Ned2SurfRoll">
-      <summary>
-      </summary>
+      <summary>Surface Angle Roll Rotation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.RemoteLeverArmX">
       <summary>
@@ -3368,20 +3310,16 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.RefLat">
-      <summary>
-      </summary>
+      <summary>Local Co-ordinates Origin Latitude</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.RefLon">
-      <summary>
-      </summary>
+      <summary>Local Co-ordinates Origin Longitude</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.RefAlt">
-      <summary>
-      </summary>
+      <summary>Local Co-ordinates Origin Altitude</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.RefHeading">
-      <summary>
-      </summary>
+      <summary>Local Co-ordinates Origin Heading</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.RefHeadingCos">
       <summary>
@@ -3444,40 +3382,31 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnZeroVelX">
-      <summary>
-      </summary>
+      <summary>Zero Velocity X Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnZeroVelY">
-      <summary>
-      </summary>
+      <summary>Zero Velocity Y Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnZeroVelZ">
-      <summary>
-      </summary>
+      <summary>Zero Velocity Z Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ZeroVelLeverArmX">
-      <summary>
-      </summary>
+      <summary>Distance to the Zero Velocity Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ZeroVelLeverArmY">
-      <summary>
-      </summary>
+      <summary>Distance to the Zero Velocity Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ZeroVelLeverArmZ">
-      <summary>
-      </summary>
+      <summary>Distance to the Zero Velocity Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ZeroVelLeverArmXAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Zero Velocity Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ZeroVelLeverArmYAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Zero Velocity Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ZeroVelLeverArmZAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Zero Velocity Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OptionSZVDelay">
       <summary>
@@ -3488,32 +3417,25 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnNoSlipH">
-      <summary>
-      </summary>
+      <summary>Lateral Advanced Slip Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoSlipLeverArmX">
-      <summary>
-      </summary>
+      <summary>Distance to the Vertical Advanced Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoSlipLeverArmY">
-      <summary>
-      </summary>
+      <summary>Distance to the Vertical Advanced Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoSlipLeverArmZ">
-      <summary>
-      </summary>
+      <summary>Distance to the Vertical Advanced Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoSlipLeverArmXAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Vertical Advanced Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoSlipLeverArmYAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Vertical Advanced Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoSlipLeverArmZAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Vertical Advanced Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OptionNSDelay">
       <summary>
@@ -3544,40 +3466,31 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadingMisAlign">
-      <summary>
-      </summary>
+      <summary>Heading Misalignment Angle</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.HeadingMisAlignAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Heading Misalignment Angle</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnNoVSlipP">
-      <summary>
-      </summary>
+      <summary>Vertical Advanced Slip Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoVSlipLeverArmX">
-      <summary>
-      </summary>
+      <summary>Distance to the Lateral Advanced Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoVSlipLeverArmY">
-      <summary>
-      </summary>
+      <summary>Distance to the Lateral Advanced Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoVSlipLeverArmZ">
-      <summary>
-      </summary>
+      <summary>Distance to the Lateral Advanced Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoVSlipLeverArmXAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Lateral Advanced Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoVSlipLeverArmYAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Lateral Advanced Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.NoVSlipLeverArmZAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Lateral Advanced Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OptionNVSDelay">
       <summary>
@@ -3608,40 +3521,31 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.PitchMisAlign">
-      <summary>
-      </summary>
+      <summary>Pitch Misalignment Angle</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.PitchMisAlignAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Pitch Misalignment Angle</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnWSpeed">
-      <summary>
-      </summary>
+      <summary>Wheel Speed Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedLeverArmX">
-      <summary>
-      </summary>
+      <summary>Distance to the Wheel Speed Measurement Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedLeverArmY">
-      <summary>
-      </summary>
+      <summary>Distance to the Wheel Speed Measurement Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedLeverArmZ">
-      <summary>
-      </summary>
+      <summary>Distance to the Wheel Speed Measurement Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedLeverArmXAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Wheel Speed Measurement Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedLeverArmYAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy off Distance to the Wheel Speed Measurement Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedLeverArmZAcc">
-      <summary>
-      </summary>
+      <summary>Accuracy of Distance to the Wheel Speed Measurement Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OptionWSpeedDelay">
       <summary>
@@ -3656,24 +3560,20 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedScale">
-      <summary>
-      </summary>
+      <summary>Wheelspeed scaling</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedScaleStd">
-      <summary>
-      </summary>
+      <summary>Wheelspeed scaling accuracy</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedNano">
       <summary>
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedCount">
-      <summary>
-      </summary>
+      <summary>Cyclic wheelspeed input counts</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedTimeUnchanged">
-      <summary>
-      </summary>
+      <summary>Time since the wheelspeed count changed</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.WSpeedFreq">
       <summary>
@@ -3687,8 +3587,7 @@
       <summary>Wheel speed velocity</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.InnHeadingH">
-      <summary>
-      </summary>
+      <summary>Heading Lock Innovation</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OptionHLDelay">
       <summary>
@@ -3747,28 +3646,22 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.TimeMismatch">
-      <summary>
-      </summary>
+      <summary>Time Mismatch Counter</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuTimeDiff">
-      <summary>
-      </summary>
+      <summary>IMU Time Difference</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuTimeMargin">
-      <summary>
-      </summary>
+      <summary>IMU Time Margin</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.ImuLoopTime">
-      <summary>
-      </summary>
+      <summary>IMU Loop Time</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OpLoopTime">
-      <summary>
-      </summary>
+      <summary>Output Loop Time</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.BnsLag">
-      <summary>
-      </summary>
+      <summary>Blended Navigation System Lag Time</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.BnsLagFilt">
       <summary>
@@ -3779,8 +3672,7 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_Type">
-      <summary>
-      </summary>
+      <summary>External GPS Type</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_Type">
       <summary>
@@ -3791,8 +3683,7 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_Format">
-      <summary>
-      </summary>
+      <summary>External GPS Format</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_Format">
       <summary>
@@ -3835,28 +3726,22 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_AntStatus">
-      <summary>
-      </summary>
+      <summary>GPS Antenna Status</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_AntStatus">
-      <summary>
-      </summary>
+      <summary>GPS Antenna Status</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_AntStatus">
-      <summary>
-      </summary>
+      <summary>GPS Antenna Status</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_AntPower">
-      <summary>
-      </summary>
+      <summary>GPS Antenna Power Status</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_AntPower">
-      <summary>
-      </summary>
+      <summary>GPS Antenna Power Status</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_AntPower">
-      <summary>
-      </summary>
+      <summary>GPS Antenna Power Status</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_PosMode">
       <summary>
@@ -3871,16 +3756,13 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_SerBaud">
-      <summary>
-      </summary>
+      <summary>Baud Rate of GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_SerBaud">
-      <summary>
-      </summary>
+      <summary>Baud Rate of GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_SerBaud">
-      <summary>
-      </summary>
+      <summary>Baud Rate of GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_SerDataBits">
       <summary>
@@ -3919,208 +3801,157 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_NumSats">
-      <summary>
-      </summary>
+      <summary>Number of Satellites Tracked</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_NumSats">
-      <summary>
-      </summary>
+      <summary>Number of Satellites Tracked</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_NumSats">
-      <summary>
-      </summary>
+      <summary>Number of Satellites Tracked</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_CpuUsed">
-      <summary>
-      </summary>
+      <summary>CPU Used on GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_CpuUsed">
-      <summary>
-      </summary>
+      <summary>CPU Used on GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_CpuUsed">
-      <summary>
-      </summary>
+      <summary>CPU Used on GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_CoreNoise">
-      <summary>
-      </summary>
+      <summary>Core Noise on GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_CoreNoise">
-      <summary>
-      </summary>
+      <summary>Core Noise on GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_CoreNoise">
-      <summary>
-      </summary>
+      <summary>Core Noise on GPS Card</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_CoreTemp">
-      <summary>
-      </summary>
+      <summary>Core Temperature</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_CoreTemp">
-      <summary>
-      </summary>
+      <summary>Core Temperature</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_CoreTemp">
-      <summary>
-      </summary>
+      <summary>Core Temperature</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_SupplyVolt">
-      <summary>
-      </summary>
+      <summary>GPS Receiver Supply Voltage</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_SupplyVolt">
-      <summary>
-      </summary>
+      <summary>GPS Receiver Supply Voltage</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_SupplyVolt">
-      <summary>
-      </summary>
+      <summary>GPS Receiver Supply Voltage</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_Chars">
-      <summary>
-      </summary>
+      <summary>Characters received from GPS1 by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_Chars">
-      <summary>
-      </summary>
+      <summary>Characters received from the External GPS by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_Chars">
-      <summary>
-      </summary>
+      <summary>Characters received from GPS2 by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_CharsSkipped">
-      <summary>
-      </summary>
+      <summary>Characters received from GPS1 by the navigation computer but not understood by the decoder</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_CharsSkipped">
-      <summary>
-      </summary>
+      <summary>Characters received from the External GPS by the navigation computer but not understood by the decoder</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_CharsSkipped">
-      <summary>
-      </summary>
+      <summary>Characters received from GPS2 by the navigation computer but not understood by the decoder</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_Pkts">
-      <summary>
-      </summary>
+      <summary>Packets received from GPS1 by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_Pkts">
-      <summary>
-      </summary>
+      <summary>Packets received from External GPS by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_Pkts">
-      <summary>
-      </summary>
+      <summary>Packets received from GPS2 by the navigation computer</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_OldPkts">
-      <summary>
-      </summary>
+      <summary>Packets received from GPS1 by the navigation computer that could not be used to update the Kalman filter (e.g. too old)</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_OldPkts">
-      <summary>
-      </summary>
+      <summary>Packets received from External GPS by the navigation computer that could not be used to update the Kalman filter (e.g. too old)</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_OldPkts">
-      <summary>
-      </summary>
+      <summary>Packets received from GPS2 by the navigation computer that could not be used to update the Kalman filter (e.g. too old)</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt1_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt2_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt3_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt4_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt5_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt6_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt7_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt8_PointXv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in X direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt1_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt2_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt3_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt4_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt5_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt6_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt7_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt8_PointYv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Y direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt1_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt2_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt3_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt4_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt5_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt6_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt7_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt8_PointZv">
-      <summary>
-      </summary>
+      <summary>Distance to the Additional Slip Point in Z direction</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.MeasPt1_Track">
       <summary>
@@ -4219,12 +4050,10 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.OsScriptID">
-      <summary>
-      </summary>
+      <summary>Start-up Script version</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.BaseStationID">
-      <summary>
-      </summary>
+      <summary>Differential Station ID</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.CharsSkipped">
       <summary>
@@ -4239,12 +4068,10 @@
       </summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.DevID">
-      <summary>
-      </summary>
+      <summary>Software Version or Development ID that is running in the RT</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.AdkDevID">
-      <summary>
-      </summary>
+      <summary>Software Version or Advanced Development Kit Development ID that is running in the RT</summary>
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.BaseStationSlot0">
       <summary>Details of the base station file used for differential corrections</summary>
@@ -4459,6 +4286,45 @@
     </member>
     <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsPosNumObsGlonass">
       <summary>Number of Glonass satellites used in position solution</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_NumMeasGalileoE1">
+      <summary>Internal receiver 1 raw Galileo measurements L1</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_NumMeasGalileoE5">
+      <summary>Internal receiver 1 raw Galileo measurements L2</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_NumMeasBeiDouB1">
+      <summary>Internal receiver 1 raw BeiDou measurements L1</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt1_NumMeasBeiDouB2">
+      <summary>Internal receiver 1 raw BeiDou measurements L2</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_NumMeasGalileoE1">
+      <summary>Internal receiver 2 raw Galileo measurements L1</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_NumMeasGalileoE5">
+      <summary>Internal receiver 2 raw Galileo measurements L2</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_NumMeasBeiDouB1">
+      <summary>Internal receiver 2 raw BeiDou measurements L1</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsInt2_NumMeasBeiDouB2">
+      <summary>Internal receiver 2 raw BeiDou measurements L2</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_NumMeasGalileoE1">
+      <summary>External receiver raw Galileo measurements L1</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_NumMeasGalileoE5">
+      <summary>External receiver raw Galileo measurements L2</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_NumMeasBeiDouB1">
+      <summary>External receiver raw BeiDou measurements L1</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsExt1_NumMeasBeiDouB2">
+      <summary>External receiver raw BeiDou measurements L2</summary>
+    </member>
+    <member name="F:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticNAVMeasurements.GpsDiffNtripStatus">
+      <summary>NTRIP state machine status.</summary>
     </member>
     <member name="T:OxTS.NavLib.MeasurementCategorisation.StaticMeasurements.StaticRangeMeasurements">
       <summary>Static Range measurements, this enum is provided for convenience
@@ -5400,6 +5266,12 @@
     <member name="P:OxTS.NavLib.Common.Measurement.MeasurementItem.DisplayName">
       <summary> The measurement name presented to the UI</summary>
     </member>
+    <member name="P:OxTS.NavLib.Common.Measurement.MeasurementItem.DeprecatedName">
+      <summary>
+             Output name used in legacy OxTS software, if blank returns <paramref>Short Name</paramref></summary>
+      <remarks>
+            This property is provided for compatibility with legacy OxTS software, for new applications use <paramname>ShortName</paramname></remarks>
+    </member>
     <member name="P:OxTS.NavLib.Common.Measurement.MeasurementItem.ShortName">
       <summary>A shortened version of the measurement name containing no spaces</summary>
     </member>
@@ -5483,7 +5355,7 @@
       <returns>
       </returns>
     </member>
-    <member name="M:OxTS.NavLib.Common.LogDataModel.MeasurementList.GetDataFromTime(System.String,System.UInt64)">
+    <member name="M:OxTS.NavLib.Common.LogDataModel.MeasurementList.GetDataFromTime(System.String,System.UInt64,System.Boolean)">
       <summary>
             Get the measurement data at a define time
             </summary>
@@ -5665,8 +5537,7 @@
     </member>
     <member name="T:OxTS.NavLib.Common.LogConditions.MeasurementLogCondition">
       <summary>
-            MeasurementLogCondition desogned to work with defined measurement with a specific target value set
-            
+            MeasurementLogCondition designed to work with defined measurement with a specific target value set
             </summary>
     </member>
     <member name="T:OxTS.NavLib.Common.LogConditions.LineLogCondition">
@@ -5682,6 +5553,11 @@
       <param name="pre_trigger_duration">pre trigger duration in seconds</param>
       <param name="post_trigger_duration">pre trigger duration in seconds</param>
       <param name="line_file">line file name</param>
+    </member>
+    <member name="T:OxTS.NavLib.Common.Licensing.OxTSLicenseNotFoundException">
+      <summary>
+            Exception thrown when license is incorrect
+            </summary>
     </member>
     <member name="T:OxTS.NavLib.Common.Event.DatastoreEventArgs">
       <summary>

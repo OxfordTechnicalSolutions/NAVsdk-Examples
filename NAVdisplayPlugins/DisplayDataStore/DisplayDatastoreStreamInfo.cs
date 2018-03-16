@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace DisplayDataStoreStreamInfo
 {
@@ -24,11 +25,14 @@ namespace DisplayDataStoreStreamInfo
         /// </summary>
         private Timer update_timer;
 
+        private IXmlSerializable serialiser;
+
         /// <summary>
         /// Constructor
         /// </summary>
         public DisplayDatastoreStreamInfo()
         {
+            serialiser = new DisplayDataStoreStreamInfoSerialiser();
             InitializeComponent();
 
             update_timer = new Timer();
@@ -89,6 +93,8 @@ namespace DisplayDataStoreStreamInfo
             }
         }
 
+        public IXmlSerializable Serialiser => serialiser;
+
         /// <summary>
         /// Called from the launching application to give the plugin access to the datastore
         /// </summary>
@@ -131,7 +137,7 @@ namespace DisplayDataStoreStreamInfo
         /// <returns></returns>
         public string GetNAVlibLicense()
         {
-           return "Enter your license here";
+           return "Enter license key here";
         }
 
         /// <summary>

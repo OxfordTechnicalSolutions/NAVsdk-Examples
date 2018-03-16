@@ -68,6 +68,7 @@
     <Compile Include="DisplayDatastoreStreamInfo.Designer.cs">
       <DependentUpon>DisplayDatastoreStreamInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisplayDataStoreStreamInfoSerialiser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

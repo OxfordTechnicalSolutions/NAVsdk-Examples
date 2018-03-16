@@ -78,5 +78,11 @@
             interface to inherit docking framework
             </summary>
         </member>
+        <member name="P:OxTS.NavLib.PluginInterface.IDockable.Serialiser">
+            <summary>
+            Serialiser to write and read plugin configuration data
+            Required to save plugins to templates
+            </summary>
+        </member>
     </members>
 </doc>

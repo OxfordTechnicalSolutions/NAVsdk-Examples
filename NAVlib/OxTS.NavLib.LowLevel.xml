@@ -4,665 +4,6 @@
         "CLRDatastore"
     </assembly>
     <members>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.report_streams(System.String@,System.Boolean)">
-            <summary>Report on all streams to an output stream</summary>
-            <param name="out">String showing debug information on streams</param>
-            <param name="include_defunct">Include streams that are no longer active</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
-            <summary>Query the data store measurement configuration of the direct mode filtered on a particular stream id</summary>
-            <param name="sms">List of measurements that have been added to direct decode from <paramref name="stream_id" /></param>
-            <param name="stream_id">Stream Id</param>
-            <param name="filter">Filter based on measurement type</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32)">
-            <summary>Query the data store measurement configuration of the direct mode filtered on a particular stream id</summary>
-            <param name="sms">List of measurements that have been added to direct decode from <paramref name="stream_id" /></param>
-            <param name="stream_id">Stream Id</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
-            <summary>Query the data store measurement configuration of the retain mode filtered on a particular stream id</summary>
-            <param name="sms">List of measurements that have been added to retain from <paramref name="stream_id" /></param>
-            <param name="stream_id">Stream Id</param>
-            <param name="filter">Filter based on measurement type</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32)">
-            <summary>Query the data store measurement configuration of the retain mode filtered on a particular stream id</summary>
-            <param name="sms">List of measurements that have been added to retain from <paramref name="stream_id" /></param>
-            <param name="stream_id">Stream Id</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
-            <summary>Query the data store measurement configuration of the direct mode</summary>
-            <param name="sms">List of measurements that have been added to direct decode</param>
-            <param name="filter">Filter based on measurement type</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@)">
-            <summary>Query the data store measurement configuration of the direct mode</summary>
-            <param name="sms">List of measurements that have been added to direct decode</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
-            <summary>Query the data store measurement configuration of the retain mode</summary>
-            <param name="sms">List of measurements that have been added to retain</param>
-            <param name="filter">Filter based on measurement type</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@)">
-            <summary>Query the data store measurement configuration of the retain mode</summary>
-            <param name="sms">List of measurements that have been added to retain</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_stream_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StreamMeasurement}@,System.UInt32,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
-            <summary>Query the measurements avaliable for a given stream</summary>
-            <param name="sms">List of measurements available from stream with <paramref name="stream_id" /></param>
-            <param name="stream_id">Stream Id</param>
-            <param name="filter">Filter based on measurement type</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_stream_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StreamMeasurement}@,System.UInt32)">
-            <summary>Query the measurements avaliable for a given stream</summary>
-            <param name="sms">List of measurements available from stream with <paramref name="stream_id" /></param>
-            <param name="stream_id">Stream Id</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_streams(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.QueryStream}@)">
-            <summary>Query the data store stream configuration</summary>
-            <param name="qss">List of QueryStream structures for all streams added to the datastore</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_groups(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.QueryGroup}@)">
-            <summary>Query the data store group configuration</summary>
-            <param name="qgs">List of QueryGroup structures for all groups within the datastore</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_resources(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.QueryResource}@)">
-            <summary>Query the data store resource configuration</summary>
-            <param name="qrs">List of QueryResource structures of all resources added to the datastore</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_stream(OxTS.NavLib.FileBased.QueryStream@,System.UInt32)">
-            <summary>Obtain some information about a stream</summary>
-            <param name="qs">QueryStream structure containing details of <paramref name="stream_id" /></param>
-            <param name="stream_id">Stream Id of stream to query</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_group(OxTS.NavLib.FileBased.QueryGroup@,System.UInt32)">
-            <summary>Obtain some information about a group</summary>
-            <param name="qg">QueryGroup structure containing details of <paramref name="group_id" /></param>
-            <param name="group_id">Group Id of group to query</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_resource(OxTS.NavLib.FileBased.QueryResource@,System.UInt32)">
-            <summary>Obtain some information about a resource</summary>
-            <param name="qr">QueryResource structure containing details of <paramref name="resource_id" /></param>
-            <param name="resource_id">Resource Id of resource to query</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.query_store(OxTS.NavLib.FileBased.QueryStore@)">
-            <summary>Obtain some information about the store</summary>
-            <param name="qs">QueryStore structure containing current store details</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.export_streams(System.Collections.Generic.List`1{System.UInt32},System.String,System.Int64,System.Int64)">
-            <summary>Export the given selection of streams to an XCom file</summary>
-            <remarks>
-If the streams happens to be from the multiple resources then stream serial numbers are remapped to the data store stream id.
-</remarks>
-            <param name="stream_ids">Stream Ids</param>
-            <param name="filename">Filename of new file</param>
-            <param name="start">GPS nanosecond of start of region to extract</param>
-            <param name="end">GPS nanosecond of end of region to extract</param>
-            <returns>RETURN_TYPE_ERROR, RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.export_resource(System.UInt32,System.String,System.Int64,System.Int64,System.Boolean)">
-            <summary>Export a section of a resource to a new file in its native or XCom file format</summary>
-            <param name="resource_id">Resource ID</param>
-            <param name="filename">Filename of new file</param>
-            <param name="start">GPS nanosecond of start of region to extract</param>
-            <param name="end">GPS nanosecond of end of region to extract</param>
-            <param name="native">If true export in native format, else export as XCom</param>
-            <returns>RETURN_TYPE_ERROR, RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.export_resource(System.UInt32,System.String,System.Int64,System.Int64)">
-            <summary>Export a section of a resource to a new file in its native file format</summary>
-            <param name="resource_id">Resource ID</param>
-            <param name="filename">Filename of new file</param>
-            <param name="start">GPS nanosecond of start of region to extract</param>
-            <param name="end">GPS nanosecond of end of region to extract</param>
-            <returns>RETURN_TYPE_ERROR, RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_get(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.UInt16}}@)">
-            <summary>Populate the destination vector with uint16 variables from the stores as requested by the aspect</summary>
-            <remarks>
-This uses the internal locks (in default locking mode) of the data store and is thread safe.
-</remarks>
-            <param name="aspect">Aspect of measurements requested</param>
-            <param name="point">GPS nanosecond of requested data</param>
-            <param name="destination">Requested data as unsigned short</param>
-            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_get(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.Double}}@)">
-            <summary>Populate the destination vector with double variables from the stores as requested by the aspect</summary>
-            <remarks>
-This uses the internal locks (in default locking mode) of the data store and is thread safe.
-</remarks>
-            <param name="aspect">Aspect of measurements requested</param>
-            <param name="point">GPS nanosecond of requested data</param>
-            <param name="destination">Requested data as double</param>
-            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_get(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Dynamic}@)">
-            <summary>Populate the destination vector with dynamics from the stores as requested by the aspect</summary>
-            <param name="aspect">Aspect of measurements requested</param>
-            <param name="point">GPS nanosecond of requested data</param>
-            <param name="destination">Requested data as Dynamic</param>
-            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_decode(System.Int64,System.Int64,System.Int64)">
-            <summary>Run retain decoder over data from <paramref name="start" /> to <paramref name="end" /> in increments of <paramref name="inc" /></summary>
-            <param name="start">GPS nanosecond to start decoding</param>
-            <param name="end">GPS nanosecond to end decoding</param>
-            <param name="inc">Nanosecond increments to decode</param>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_use_element(OxTS.NavLib.FileBased.Aspect,System.UInt32,System.String)">
-            <summary>Use elements in an aspect</summary>
-            <param name="aspect">Aspect to add measurement to</param>
-            <param name="stream_id">Stream Id</param>
-            <param name="tag">Measurement name to use for retain decode</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_add_element(System.UInt32,System.String)">
-            <summary>Add elements of a stream to a store</summary>
-            <remarks>
-For retain mode all elements are added to the same store.
-</remarks>
-            <param name="stream_id">Stream Id</param>
-            <param name="tag">Measurement name to add for retain decode</param>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_clear">
-            <summary>Clear the internal element configuration</summary>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_end">
-            <summary>Direct decode set-down function</summary>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_step(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.UInt16}}@)">
-            <summary>Populate the destination arrays with uint16 values and flags from the streams as requested by the aspect</summary>			//!
-<remarks>
-When finished using this function one must call direct_decode_end().
-</remarks><param name="aspect">Aspect containing the measuremnts requested</param><param name="point">GPS nanosecond value to decode</param><param name="destination">Measurement values output as unsigned short</param><returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns></member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_step(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.Double}}@)">
-            <summary>Populate the destination arrays with double values and flags from the streams as requested by the aspect</summary>
-            <remarks>
-When finished using this function one must call direct_decode_end().
-</remarks>
-            <param name="aspect">Aspect containing the measuremnts requested</param>
-            <param name="point">GPS nanosecond value to decode</param>
-            <param name="destination">Measurement values output as double</param>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_step(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Dynamic}@)">
-            <summary>Populate the destination array with dynamics from the streams as requested by the aspect</summary>
-            <remarks>
-This method is not the fastest way to get data but it is quite convenient.
-When finished using this function one must call direct_decode_end().
-</remarks>
-            <param name="aspect">Aspect containing the measuremnts requested</param>
-            <param name="point">GPS nanosecond value to decode</param>
-            <param name="destination">Measurement values output as Dynamic</param>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_begin(System.Int64)">
-            <summary>Direct decode set-up function</summary>
-            <remarks>
-Enables streams to decode the right things and the intial seek.
-The next call after this must be one of the direct_decode_step() functions.
-</remarks>
-            <param name="point">GPS nanosecond value to start the decoder at</param>
-            <returns>RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_use_element(OxTS.NavLib.FileBased.Aspect,System.UInt32,System.String)">
-            <summary>Use elements in an aspect</summary>
-            <param name="aspect">Aspect to add measurement to</param>
-            <param name="stream_id">Stream Id</param>
-            <param name="tag">Measurement name to use for direct decode</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_add_element(System.UInt32,System.String)">
-            <summary>Add elements of a stream to a store</summary>
-            <remarks>For direct mode all elements are added to the same store.</remarks>
-            <param name="stream_id">Stream Id</param>
-            <param name="tag">Measurement name to add for direct decode</param>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_clear">
-            <summary>Clear the internal element configuration</summary>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.Int64@)">
-            <summary>Obtain the latest nano value from the postscans of all the storable streams</summary>
-            <remarks>One should ensure at leat one stream is storable otherwise the result in meaningless.</remarks>
-            <param name="nano_end">GPS nanosecond time of the latest point in the datastore</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.Int64@)">
-            <summary>Obtain the earliest nano value from the prescans of all the storable streams</summary>
-            <remarks>One should ensure at leat one stream is storable otherwise the result in meaningless.</remarks>
-            <param name="nano_start">GPS nanosecond time of the earliest point in the datastore</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.Collections.Generic.List`1{System.UInt32},System.Int64@)">
-            <summary>Obtain the latest nano value from the prescans of a collection of storable streams</summary>
-            <remarks>One should ensure at least one stream is storable otherwise the result in meaningless.</remarks>
-            <param name="stream_ids">Stream Ids</param>
-            <param name="nano_end">GPS nanosecond time of the end of the latest stream</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.Collections.Generic.List`1{System.UInt32},System.Int64@)">
-            <summary>Obtain the earliest nano value from the prescans of a collection of storable streams</summary>
-            <remarks>One should ensure at least one stream is storable otherwise the result in meaningless.</remarks>
-            <param name="stream_ids">Stream Ids</param>
-            <param name="nano_start">GPS nanosecond time of the earliest stream</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.UInt32,System.Int64@)">
-            <summary>Obtain the nano value from the postscan of a storable stream</summary>
-            <remarks>One should not call this on a non-storable stream as the result in meaningless.</remarks>
-            <param name="stream_id">Stream Id</param>
-            <param name="nano_end">GPS nanosecond time at end of stream with <paramref name="stream_id" /></param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.UInt32,System.Int64@)">
-            <summary>Obtain the nano value from the prescan of a storable stream</summary>
-            <remarks>One should not call this on a non-storable stream as the result in meaningless.</remarks>
-            <param name="stream_id">Stream Id</param>
-            <param name="nano_start">GPS nanosecond time at start of stream with <paramref name="stream_id" /></param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.UInt32,System.String,OxTS.NavLib.Lib.Dynamic@)">
-            <summary>Obtain a value from the postscan</summary>
-            <param name="stream_id">Stream</param>
-            <param name="tag">Name of measurement requested</param>
-            <param name="dyn_end">
-                <paramref name="tag" /> measurement from <paramref name="stream_id" /> at end of stream</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.UInt32,System.String,OxTS.NavLib.Lib.Dynamic@)">
-            <summary>Obtain a value from the prescan</summary>
-            <param name="stream_id">Stream</param>
-            <param name="tag">Name of measurement requested</param>
-            <param name="dyn_start">
-                <paramref name="tag" /> measurement from <paramref name="stream_id" /> at start of stream</param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_header(System.UInt32,System.String,OxTS.NavLib.Com.Meta@)">
-            <summary>Obtain a copy of a specific auxiliary header</summary>
-            <param name="stream_id">Stream</param>
-            <param name="tag">Name of the header requested</param>
-            <param name="meta">
-                <paramref name="tag" /> header from  <paramref name="stream_id" /></param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_headers(System.UInt32,System.Collections.Generic.List`1{OxTS.NavLib.Com.Meta}@)">
-            <summary>Obtain a copy of the auxiliary headers</summary>
-            <param name="stream_id">Stream</param>
-            <param name="metas">Auxillary headers from <paramref name="stream_id" /></param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_stream_groupies(System.UInt32,System.Collections.Generic.List`1{System.UInt32}@)">
-            <summary>Get all streams that are members of the same group as the given stream</summary>
-            <remarks>
-The returned streams will contain the given stream, unless the given stream is unknown to the store
-resulting in an empty result. If the size of the returned streams is one then we can conclude the
-given stream is a singleton.
-</remarks>
-            <param name="stream_id">Stream in group</param>
-            <param name="stream_ids">List of streams that are in the same group as <paramref name="stream_id" /></param>
-            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.add_resources(System.Collections.Generic.List`1{System.String},System.Collections.Generic.List`1{System.UInt32},System.UInt32@)">
-            <summary>Add physical resources to the data store</summary>
-            <param name="names">Resource locations (filenames)</param>
-            <param name="stream_ids">List of stream IDs, new streams from resources will be appended</param>
-            <param name="added">Number of streams added</param>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.add_resource(System.String,System.Collections.Generic.List`1{System.UInt32},System.UInt32@)">
-            <summary>Add a resource to the data store</summary>
-            <param name="name">Resource location (filename)</param>
-            <param name="stream_ids">List of stream IDs, new streams from resources will be appended</param>
-            <param name="added">Number of streams added</param>
-            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_outgoing_message(OxTS.NavLib.FileBased.MessageOutgoing@,System.Boolean)">
-            <summary>Get data store outgoing message</summary>
-            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-            <param name="message">Reference used to return the outgoing message</param>
-            <param name="flush">Flush message queue</param>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.get_outgoing_message(OxTS.NavLib.FileBased.MessageOutgoing@)">
-            <summary>Get data store outgoing message, does not flush message queue</summary>
-            <param name="message">Reference used to return the outgoing message</param>
-            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.cancel">
-            <summary>Request the data store to cancel all current operations and leave the store in a good shape</summary>
-            <remarks>
-This function will wait until all the current read and write locks are cleared. While in this function
-any incoming calls (other than get_outgoing_message()) will be blocked on the cancel lock. Upon exit
-the cancel lock is cleared and the data store is again ready to be used. The user should manage any
-race conditions after the exiting of this function. If this function times out and not all locks have
-been cleared then the error return type is returned.
-</remarks>
-            <returns>RETURN_TYPE_CANCEL, RETURN_TYPE_NORMAL</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.Finalize">
-            <summary>Finalizer</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.Dispose">
-            <summary>Destructor</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DataStore.#ctor(OxTS.NavLib.FileBased.Options)">
-            <summary>Constructor</summary>
-            <param name="options">Define the size and resolution of the datastore data</param>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.DataStore">
-            <summary>FileBased datastore classes</summary>
-            <summary>FileBased datastore</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Options.#ctor(System.UInt32,System.Int64,System.UInt32,System.Double,System.UInt64,System.UInt32)">
-            <summary>Constructor</summary>
-            <param name="store_depth">Maximum size of the storage space per stream is pow(2, store_depth) bytes</param>
-            <param name="store_resolution">Maximum temporal resolution of the storage space for a stream</param>
-            <param name="threads">Number of decode threads to use if threading enabled</param>
-            <param name="message_time">Progress message reporting frequency based on time used</param>
-            <param name="message_gap">Progress message reporting frequency based on bytes read</param>
-            <param name="message_depth">Size of message buffer is pow(2, message_depth) bytes</param>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Options.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.Options.MessageDepth">
-            <summary>Size of message buffer is pow(2, message_depth) bytes</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.Options.MessageGap">
-            <summary>Progress message reporting frequency based on bytes read</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.Options.MessageTime">
-            <summary>Progress message reporting frequency based on time used</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.Options.Threads">
-            <summary>Number of decode threads to use if threading enabled</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.Options.StoreResolution">
-            <summary>Maximum temporal resolution of the storage space for a stream</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.Options.StoreDepth">
-            <summary>Maximum size of the storage space per stream is pow(2, store_depth) bytes</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.Options">
-            <summary>Global datastore option</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.MessageOutgoing.done">
-            <summary>Message sent</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.MessageOutgoing.operation">
-            <summary>Message type</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.MessageOutgoing.resource_id">
-            <summary>resource message relates to</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.MessageOutgoing.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.MessageOutgoing">
-            <summary>Simple structure to aid messaging</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.destination_at(System.UInt32)">
-            <summary>Get specific destination measurement from Aspect</summary>
-            <param name="destination_index">Index of destination measurement to retrieve</param>
-            <returns>Copy of destination measurement if index is in range, nullptr otherwise</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.destinations">
-            <summary>Get List of destination measurements from Aspect</summary>
-            <returns>List of destination measurements</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.measurement_at(System.UInt32)">
-            <summary>Get measurement at <paramref name="measurement_index" /></summary>
-            <param name="measurement_index">index of aspect measurement to retrieve</param>
-            <returns>Copy of aspect measurement if index is in range, nullptr otherwise</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.measurements">
-            <summary>Measurement information</summary>
-            <returns>List of measurements in aspect</returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.clear">
-            <summary>Clears the aspect stores, measurements and destinations</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.Finalize">
-            <summary>Finalizer</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.Dispose">
-            <summary>Destructor</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.Aspect.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.Aspect">
-            <summary>Aspect</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryStream.op_Assign(OxTS.NavLib.FileBased.QueryStream)">
-            <summary>Assigment operator</summary>
-            <param name="copy">Object to copy</param>
-            <returns>Copy of <paramref name="copy" /></returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryStream.#ctor(OxTS.NavLib.FileBased.QueryStream)">
-            <summary>Copy Constructor</summary>
-            <param name="copy">Object to copy</param>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamNanoEnd">
-            <summary>Stream end time</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamNanoStart">
-            <summary>Stream start time</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamProduct">
-            <summary>Product name</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamStorable">
-            <summary>Is stream storable?</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamConfigured">
-            <summary>Is stream configured?</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamCaptured">
-            <summary>Is stream captured?</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamCodec">
-            <summary>The stream codec type</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamSerialId">
-            <summary>The serial assigned by the resource</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamId">
-            <summary>The stream id assigned by the data store</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryStream.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.QueryStream">
-            <summary>Simple structure to aid the querying of a stream</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryGroup.op_Assign(OxTS.NavLib.FileBased.QueryGroup)">
-            <summary>Assigment operator</summary>
-            <param name="copy">Object to copy</param>
-            <returns>Copy of <paramref name="copy" /></returns>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryGroup.GroupTag">
-            <summary>Group Tag assigned by the resource</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryGroup.GroupId">
-            <summary>Group Id assigned by the datastore</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryGroup.#ctor">
-            <summary>Default constrctor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.QueryGroup">
-            <summary>brief Simple structure to aid the querying of a group.</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryResource.op_Assign(OxTS.NavLib.FileBased.QueryResource)">
-            <summary>Assigment operator</summary>
-            <param name="copy">Object to copy</param>
-            <returns>Copy of <paramref name="copy" /></returns>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryResource.#ctor(OxTS.NavLib.FileBased.QueryResource)">
-            <summary>Copy constructor</summary>
-            <param name="copy">Object to copy</param>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceExtension">
-            <summary>Resource Extension</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceName">
-            <summary>Resource Name</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceTransport">
-            <summary>Resource transpport type</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceId">
-            <summary>Resource Id assigned by the datastore</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryResource.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.QueryResource">
-            <summary>Simple structure to aid the querying of a resource.</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStore.Streams">
-            <summary>Number of streams in datastore</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStore.Groups">
-            <summary>Number of groups in datastore</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.QueryStore.Resources">
-            <summary>Number of resources in datastore</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.QueryStore.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.QueryStore">
-            <summary>Simple structure to aid the querying general properties of the data store.</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.DestinationMeasurement.index">
-            <summary>Index into the original mesaurement</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.DestinationMeasurement.measurement">
-            <summary>Original measurement index</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DestinationMeasurement.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.DestinationMeasurement">
-            <summary>A simple structure allowing information of the interface array positions to be collected</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.AspectMeasurement.destination">
-            <summary>Destination position in the target structure</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.AspectMeasurement.dimension">
-            <summary>Dimension position in the target structure</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.AspectMeasurement.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.AspectMeasurement">
-            <summary>A simple structure allowing information of the interface array positions to be collected</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.StoreMeasurement.position">
-            <summary>Position in the store</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.StoreMeasurement.store_id">
-            <summary>The store id in the system</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.StoreMeasurement.system_id">
-            <summary>System id</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.StoreMeasurement.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.StoreMeasurement">
-            <summary>A simple structure allowing information of the interface array positions to be collected.</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.StreamMeasurement.stream_id">
-            <summary>Data store stream id</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.StreamMeasurement.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.StreamMeasurement">
-            <summary>A simple structure collecting various measurement information</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.DynamicMeasurement.is_array">
-            <summary>Is measurement an array?</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.DynamicMeasurement.type">
-            <summary>Basic type</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.DynamicMeasurement.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.DynamicMeasurement">
-            <summary>A simple structure collecting various measurement information</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.PointerMeasurement.category">
-            <summary>Data store category</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.PointerMeasurement.measurement_id">
-            <summary>Identification</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.PointerMeasurement.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.PointerMeasurement">
-            <summary>A simple structure collecting various measurement information</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_ang_sweep">
-            <summary>Default display parameters</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_ang_start">
-            <summary>Default display parameters</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_max">
-            <summary>Default display parameters</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_min">
-            <summary>Default display parameters</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.comment">
-            <summary>comment (further measurement information)</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.unit">
-            <summary>unit</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.size">
-            <summary>size</summary>
-        </member>
-        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.tag">
-            <summary>Data store measurement name</summary>
-        </member>
-        <member name="M:OxTS.NavLib.FileBased.InfoMeasurement.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.FileBased.InfoMeasurement">
-            <summary>A simple structure collecting various measurement information</summary>
-        </member>
         <member name="M:OxTS.NavLib.Realtime.DataStore.report_streams(System.String@,System.Boolean)">
             <summary>Debug function to return string representation of streams in both high and low level code</summary>
             <param name="out">String showing debug information on streams</param>
@@ -1297,22 +638,6 @@ Start serial interface with options
         </member>
         <member name="T:OxTS.NavLib.Realtime.DataStore">
             <summary>Access class for online datastore. </summary>
-        </member>
-        <member name="F:OxTS.NavLib.Com.Meta.map">
-            <summary>Parsed meta data</summary>
-        </member>
-        <member name="F:OxTS.NavLib.Com.Meta.title">
-            <summary>Raw data component</summary>
-        </member>
-        <member name="F:OxTS.NavLib.Com.Meta.raw">
-            <summary>Raw data component</summary>
-        </member>
-        <member name="M:OxTS.NavLib.Com.Meta.#ctor">
-            <summary>Default constructor</summary>
-        </member>
-        <member name="T:OxTS.NavLib.Com.Meta">
-            <summary>Communication related classes</summary>
-            <summary>Ogg stream meta data</summary>
         </member>
         <member name="M:OxTS.NavLib.Lib.DeviceParams.Serial.#ctor(System.UInt16,System.UInt32,OxTS.NavLib.Enum.SERIAL_DATA_BITS,OxTS.NavLib.Enum.SERIAL_PARITY,OxTS.NavLib.Enum.SERIAL_STOP_BITS)">
             <summary>Constructor</summary>
@@ -2115,6 +1440,579 @@ Simple structure to aid the querying general properties of the data store</summa
         <member name="T:OxTS.NavLib.Lib.GPSWeekSecond">
             <summary>Struct to store the GPS Week number and Weeksecond</summary>
         </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.report_streams(System.String@,System.Boolean)">
+            <summary>Report on all streams to an output stream</summary>
+            <param name="out">String showing debug information on streams</param>
+            <param name="include_defunct">Include streams that are no longer active</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
+            <summary>Query the data store measurement configuration of the direct mode filtered on a particular stream id</summary>
+            <param name="sms">List of measurements that have been added to direct decode from <paramref name="stream_id" /></param>
+            <param name="stream_id">Stream Id</param>
+            <param name="filter">Filter based on measurement type</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32)">
+            <summary>Query the data store measurement configuration of the direct mode filtered on a particular stream id</summary>
+            <param name="sms">List of measurements that have been added to direct decode from <paramref name="stream_id" /></param>
+            <param name="stream_id">Stream Id</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
+            <summary>Query the data store measurement configuration of the retain mode filtered on a particular stream id</summary>
+            <param name="sms">List of measurements that have been added to retain from <paramref name="stream_id" /></param>
+            <param name="stream_id">Stream Id</param>
+            <param name="filter">Filter based on measurement type</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,System.UInt32)">
+            <summary>Query the data store measurement configuration of the retain mode filtered on a particular stream id</summary>
+            <param name="sms">List of measurements that have been added to retain from <paramref name="stream_id" /></param>
+            <param name="stream_id">Stream Id</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
+            <summary>Query the data store measurement configuration of the direct mode</summary>
+            <param name="sms">List of measurements that have been added to direct decode</param>
+            <param name="filter">Filter based on measurement type</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_direct_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@)">
+            <summary>Query the data store measurement configuration of the direct mode</summary>
+            <param name="sms">List of measurements that have been added to direct decode</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
+            <summary>Query the data store measurement configuration of the retain mode</summary>
+            <param name="sms">List of measurements that have been added to retain</param>
+            <param name="filter">Filter based on measurement type</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_retain_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StoreMeasurement}@)">
+            <summary>Query the data store measurement configuration of the retain mode</summary>
+            <param name="sms">List of measurements that have been added to retain</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_stream_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StreamMeasurement}@,System.UInt32,OxTS.NavLib.Enum.MEASUREMENT_TYPE)">
+            <summary>Query the measurements avaliable for a given stream</summary>
+            <param name="sms">List of measurements available from stream with <paramref name="stream_id" /></param>
+            <param name="stream_id">Stream Id</param>
+            <param name="filter">Filter based on measurement type</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_stream_measurements(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.StreamMeasurement}@,System.UInt32)">
+            <summary>Query the measurements avaliable for a given stream</summary>
+            <param name="sms">List of measurements available from stream with <paramref name="stream_id" /></param>
+            <param name="stream_id">Stream Id</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_streams(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.QueryStream}@)">
+            <summary>Query the data store stream configuration</summary>
+            <param name="qss">List of QueryStream structures for all streams added to the datastore</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_groups(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.QueryGroup}@)">
+            <summary>Query the data store group configuration</summary>
+            <param name="qgs">List of QueryGroup structures for all groups within the datastore</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_resources(System.Collections.Generic.List`1{OxTS.NavLib.FileBased.QueryResource}@)">
+            <summary>Query the data store resource configuration</summary>
+            <param name="qrs">List of QueryResource structures of all resources added to the datastore</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_stream(OxTS.NavLib.FileBased.QueryStream@,System.UInt32)">
+            <summary>Obtain some information about a stream</summary>
+            <param name="qs">QueryStream structure containing details of <paramref name="stream_id" /></param>
+            <param name="stream_id">Stream Id of stream to query</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_group(OxTS.NavLib.FileBased.QueryGroup@,System.UInt32)">
+            <summary>Obtain some information about a group</summary>
+            <param name="qg">QueryGroup structure containing details of <paramref name="group_id" /></param>
+            <param name="group_id">Group Id of group to query</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_resource(OxTS.NavLib.FileBased.QueryResource@,System.UInt32)">
+            <summary>Obtain some information about a resource</summary>
+            <param name="qr">QueryResource structure containing details of <paramref name="resource_id" /></param>
+            <param name="resource_id">Resource Id of resource to query</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.query_store(OxTS.NavLib.FileBased.QueryStore@)">
+            <summary>Obtain some information about the store</summary>
+            <param name="qs">QueryStore structure containing current store details</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.export_streams(System.Collections.Generic.List`1{System.UInt32},System.String,System.Int64,System.Int64)">
+            <summary>Export the given selection of streams to an XCom file</summary>
+            <remarks>
+If the streams happens to be from the multiple resources then stream serial numbers are remapped to the data store stream id.
+</remarks>
+            <param name="stream_ids">Stream Ids</param>
+            <param name="filename">Filename of new file</param>
+            <param name="start">GPS nanosecond of start of region to extract</param>
+            <param name="end">GPS nanosecond of end of region to extract</param>
+            <returns>RETURN_TYPE_ERROR, RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.export_resource(System.UInt32,System.String,System.Int64,System.Int64,System.Boolean)">
+            <summary>Export a section of a resource to a new file in its native or XCom file format</summary>
+            <param name="resource_id">Resource ID</param>
+            <param name="filename">Filename of new file</param>
+            <param name="start">GPS nanosecond of start of region to extract</param>
+            <param name="end">GPS nanosecond of end of region to extract</param>
+            <param name="native">If true export in native format, else export as XCom</param>
+            <returns>RETURN_TYPE_ERROR, RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.export_resource(System.UInt32,System.String,System.Int64,System.Int64)">
+            <summary>Export a section of a resource to a new file in its native file format</summary>
+            <param name="resource_id">Resource ID</param>
+            <param name="filename">Filename of new file</param>
+            <param name="start">GPS nanosecond of start of region to extract</param>
+            <param name="end">GPS nanosecond of end of region to extract</param>
+            <returns>RETURN_TYPE_ERROR, RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_get(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.UInt16}}@)">
+            <summary>Populate the destination vector with uint16 variables from the stores as requested by the aspect</summary>
+            <remarks>
+This uses the internal locks (in default locking mode) of the data store and is thread safe.
+</remarks>
+            <param name="aspect">Aspect of measurements requested</param>
+            <param name="point">GPS nanosecond of requested data</param>
+            <param name="destination">Requested data as unsigned short</param>
+            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_get(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.Double}}@)">
+            <summary>Populate the destination vector with double variables from the stores as requested by the aspect</summary>
+            <remarks>
+This uses the internal locks (in default locking mode) of the data store and is thread safe.
+</remarks>
+            <param name="aspect">Aspect of measurements requested</param>
+            <param name="point">GPS nanosecond of requested data</param>
+            <param name="destination">Requested data as double</param>
+            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_get(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Dynamic}@)">
+            <summary>Populate the destination vector with dynamics from the stores as requested by the aspect</summary>
+            <param name="aspect">Aspect of measurements requested</param>
+            <param name="point">GPS nanosecond of requested data</param>
+            <param name="destination">Requested data as Dynamic</param>
+            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_decode(System.Int64,System.Int64,System.Int64)">
+            <summary>Run retain decoder over data from <paramref name="start" /> to <paramref name="end" /> in increments of <paramref name="inc" /></summary>
+            <param name="start">GPS nanosecond to start decoding</param>
+            <param name="end">GPS nanosecond to end decoding</param>
+            <param name="inc">Nanosecond increments to decode</param>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_use_element(OxTS.NavLib.FileBased.Aspect,System.UInt32,System.String)">
+            <summary>Use elements in an aspect</summary>
+            <param name="aspect">Aspect to add measurement to</param>
+            <param name="stream_id">Stream Id</param>
+            <param name="tag">Measurement name to use for retain decode</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_add_element(System.UInt32,System.String)">
+            <summary>Add elements of a stream to a store</summary>
+            <remarks>
+For retain mode all elements are added to the same store.
+</remarks>
+            <param name="stream_id">Stream Id</param>
+            <param name="tag">Measurement name to add for retain decode</param>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.retain_clear">
+            <summary>Clear the internal element configuration</summary>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_end">
+            <summary>Direct decode set-down function</summary>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_step(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.UInt16}}@)">
+            <summary>Populate the destination arrays with uint16 values and flags from the streams as requested by the aspect</summary>			//!
+<remarks>
+When finished using this function one must call direct_decode_end().
+</remarks><param name="aspect">Aspect containing the measuremnts requested</param><param name="point">GPS nanosecond value to decode</param><param name="destination">Measurement values output as unsigned short</param><returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns></member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_step(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Variable`1{System.Double}}@)">
+            <summary>Populate the destination arrays with double values and flags from the streams as requested by the aspect</summary>
+            <remarks>
+When finished using this function one must call direct_decode_end().
+</remarks>
+            <param name="aspect">Aspect containing the measuremnts requested</param>
+            <param name="point">GPS nanosecond value to decode</param>
+            <param name="destination">Measurement values output as double</param>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_step(OxTS.NavLib.FileBased.Aspect,System.Int64,System.Collections.Generic.List`1{OxTS.NavLib.Lib.Dynamic}@)">
+            <summary>Populate the destination array with dynamics from the streams as requested by the aspect</summary>
+            <remarks>
+This method is not the fastest way to get data but it is quite convenient.
+When finished using this function one must call direct_decode_end().
+</remarks>
+            <param name="aspect">Aspect containing the measuremnts requested</param>
+            <param name="point">GPS nanosecond value to decode</param>
+            <param name="destination">Measurement values output as Dynamic</param>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_decode_begin(System.Int64)">
+            <summary>Direct decode set-up function</summary>
+            <remarks>
+Enables streams to decode the right things and the intial seek.
+The next call after this must be one of the direct_decode_step() functions.
+</remarks>
+            <param name="point">GPS nanosecond value to start the decoder at</param>
+            <returns>RETURN_TYPE_CANCEL, RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_use_element(OxTS.NavLib.FileBased.Aspect,System.UInt32,System.String)">
+            <summary>Use elements in an aspect</summary>
+            <param name="aspect">Aspect to add measurement to</param>
+            <param name="stream_id">Stream Id</param>
+            <param name="tag">Measurement name to use for direct decode</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_add_element(System.UInt32,System.String)">
+            <summary>Add elements of a stream to a store</summary>
+            <remarks>For direct mode all elements are added to the same store.</remarks>
+            <param name="stream_id">Stream Id</param>
+            <param name="tag">Measurement name to add for direct decode</param>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.direct_clear">
+            <summary>Clear the internal element configuration</summary>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.Int64@)">
+            <summary>Obtain the latest nano value from the postscans of all the storable streams</summary>
+            <remarks>One should ensure at leat one stream is storable otherwise the result in meaningless.</remarks>
+            <param name="nano_end">GPS nanosecond time of the latest point in the datastore</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.Int64@)">
+            <summary>Obtain the earliest nano value from the prescans of all the storable streams</summary>
+            <remarks>One should ensure at leat one stream is storable otherwise the result in meaningless.</remarks>
+            <param name="nano_start">GPS nanosecond time of the earliest point in the datastore</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.Collections.Generic.List`1{System.UInt32},System.Int64@)">
+            <summary>Obtain the latest nano value from the prescans of a collection of storable streams</summary>
+            <remarks>One should ensure at least one stream is storable otherwise the result in meaningless.</remarks>
+            <param name="stream_ids">Stream Ids</param>
+            <param name="nano_end">GPS nanosecond time of the end of the latest stream</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.Collections.Generic.List`1{System.UInt32},System.Int64@)">
+            <summary>Obtain the earliest nano value from the prescans of a collection of storable streams</summary>
+            <remarks>One should ensure at least one stream is storable otherwise the result in meaningless.</remarks>
+            <param name="stream_ids">Stream Ids</param>
+            <param name="nano_start">GPS nanosecond time of the earliest stream</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.UInt32,System.Int64@)">
+            <summary>Obtain the nano value from the postscan of a storable stream</summary>
+            <remarks>One should not call this on a non-storable stream as the result in meaningless.</remarks>
+            <param name="stream_id">Stream Id</param>
+            <param name="nano_end">GPS nanosecond time at end of stream with <paramref name="stream_id" /></param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.UInt32,System.Int64@)">
+            <summary>Obtain the nano value from the prescan of a storable stream</summary>
+            <remarks>One should not call this on a non-storable stream as the result in meaningless.</remarks>
+            <param name="stream_id">Stream Id</param>
+            <param name="nano_start">GPS nanosecond time at start of stream with <paramref name="stream_id" /></param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_end(System.UInt32,System.String,OxTS.NavLib.Lib.Dynamic@)">
+            <summary>Obtain a value from the postscan</summary>
+            <param name="stream_id">Stream</param>
+            <param name="tag">Name of measurement requested</param>
+            <param name="dyn_end">
+                <paramref name="tag" /> measurement from <paramref name="stream_id" /> at end of stream</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_start(System.UInt32,System.String,OxTS.NavLib.Lib.Dynamic@)">
+            <summary>Obtain a value from the prescan</summary>
+            <param name="stream_id">Stream</param>
+            <param name="tag">Name of measurement requested</param>
+            <param name="dyn_start">
+                <paramref name="tag" /> measurement from <paramref name="stream_id" /> at start of stream</param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_header(System.UInt32,System.String,OxTS.NavLib.Com.Meta@)">
+            <summary>Obtain a copy of a specific auxiliary header</summary>
+            <param name="stream_id">Stream</param>
+            <param name="tag">Name of the header requested</param>
+            <param name="meta">
+                <paramref name="tag" /> header from  <paramref name="stream_id" /></param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_headers(System.UInt32,System.Collections.Generic.List`1{OxTS.NavLib.Com.Meta}@)">
+            <summary>Obtain a copy of the auxiliary headers</summary>
+            <param name="stream_id">Stream</param>
+            <param name="metas">Auxillary headers from <paramref name="stream_id" /></param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_stream_groupies(System.UInt32,System.Collections.Generic.List`1{System.UInt32}@)">
+            <summary>Get all streams that are members of the same group as the given stream</summary>
+            <remarks>
+The returned streams will contain the given stream, unless the given stream is unknown to the store
+resulting in an empty result. If the size of the returned streams is one then we can conclude the
+given stream is a singleton.
+</remarks>
+            <param name="stream_id">Stream in group</param>
+            <param name="stream_ids">List of streams that are in the same group as <paramref name="stream_id" /></param>
+            <returns>RETURN_TYPE_READ, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.add_resources(System.Collections.Generic.List`1{System.String},System.Collections.Generic.List`1{System.UInt32},System.UInt32@)">
+            <summary>Add physical resources to the data store</summary>
+            <param name="names">Resource locations (filenames)</param>
+            <param name="stream_ids">List of stream IDs, new streams from resources will be appended</param>
+            <param name="added">Number of streams added</param>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.add_resource(System.String,System.Collections.Generic.List`1{System.UInt32},System.UInt32@)">
+            <summary>Add a resource to the data store</summary>
+            <param name="name">Resource location (filename)</param>
+            <param name="stream_ids">List of stream IDs, new streams from resources will be appended</param>
+            <param name="added">Number of streams added</param>
+            <returns>RETURN_TYPE_WRITE, RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_outgoing_message(OxTS.NavLib.FileBased.MessageOutgoing@,System.Boolean)">
+            <summary>Get data store outgoing message</summary>
+            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+            <param name="message">Reference used to return the outgoing message</param>
+            <param name="flush">Flush message queue</param>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.get_outgoing_message(OxTS.NavLib.FileBased.MessageOutgoing@)">
+            <summary>Get data store outgoing message, does not flush message queue</summary>
+            <param name="message">Reference used to return the outgoing message</param>
+            <returns>RETURN_TYPE_NOTHING, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.cancel">
+            <summary>Request the data store to cancel all current operations and leave the store in a good shape</summary>
+            <remarks>
+This function will wait until all the current read and write locks are cleared. While in this function
+any incoming calls (other than get_outgoing_message()) will be blocked on the cancel lock. Upon exit
+the cancel lock is cleared and the data store is again ready to be used. The user should manage any
+race conditions after the exiting of this function. If this function times out and not all locks have
+been cleared then the error return type is returned.
+</remarks>
+            <returns>RETURN_TYPE_CANCEL, RETURN_TYPE_NORMAL</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.Finalize">
+            <summary>Finalizer</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.Dispose">
+            <summary>Destructor</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DataStore.#ctor(OxTS.NavLib.FileBased.Options)">
+            <summary>Constructor</summary>
+            <param name="options">Define the size and resolution of the datastore data</param>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.DataStore">
+            <summary>FileBased datastore classes</summary>
+            <summary>FileBased datastore</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Options.#ctor(System.UInt32,System.Int64,System.UInt32,System.Double,System.UInt64,System.UInt32)">
+            <summary>Constructor</summary>
+            <param name="store_depth">Maximum size of the storage space per stream is pow(2, store_depth) bytes</param>
+            <param name="store_resolution">Maximum temporal resolution of the storage space for a stream</param>
+            <param name="threads">Number of decode threads to use if threading enabled</param>
+            <param name="message_time">Progress message reporting frequency based on time used</param>
+            <param name="message_gap">Progress message reporting frequency based on bytes read</param>
+            <param name="message_depth">Size of message buffer is pow(2, message_depth) bytes</param>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Options.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.Options.MessageDepth">
+            <summary>Size of message buffer is pow(2, message_depth) bytes</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.Options.MessageGap">
+            <summary>Progress message reporting frequency based on bytes read</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.Options.MessageTime">
+            <summary>Progress message reporting frequency based on time used</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.Options.Threads">
+            <summary>Number of decode threads to use if threading enabled</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.Options.StoreResolution">
+            <summary>Maximum temporal resolution of the storage space for a stream</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.Options.StoreDepth">
+            <summary>Maximum size of the storage space per stream is pow(2, store_depth) bytes</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.Options">
+            <summary>Global datastore option</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.MessageOutgoing.done">
+            <summary>Message sent</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.MessageOutgoing.operation">
+            <summary>Message type</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.MessageOutgoing.resource_id">
+            <summary>resource message relates to</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.MessageOutgoing.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.MessageOutgoing">
+            <summary>Simple structure to aid messaging</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.destination_at(System.UInt32)">
+            <summary>Get specific destination measurement from Aspect</summary>
+            <param name="destination_index">Index of destination measurement to retrieve</param>
+            <returns>Copy of destination measurement if index is in range, nullptr otherwise</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.destinations">
+            <summary>Get List of destination measurements from Aspect</summary>
+            <returns>List of destination measurements</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.measurement_at(System.UInt32)">
+            <summary>Get measurement at <paramref name="measurement_index" /></summary>
+            <param name="measurement_index">index of aspect measurement to retrieve</param>
+            <returns>Copy of aspect measurement if index is in range, nullptr otherwise</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.measurements">
+            <summary>Measurement information</summary>
+            <returns>List of measurements in aspect</returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.clear">
+            <summary>Clears the aspect stores, measurements and destinations</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.Finalize">
+            <summary>Finalizer</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.Dispose">
+            <summary>Destructor</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.Aspect.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.Aspect">
+            <summary>Aspect</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryStream.op_Assign(OxTS.NavLib.FileBased.QueryStream)">
+            <summary>Assigment operator</summary>
+            <param name="copy">Object to copy</param>
+            <returns>Copy of <paramref name="copy" /></returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryStream.#ctor(OxTS.NavLib.FileBased.QueryStream)">
+            <summary>Copy Constructor</summary>
+            <param name="copy">Object to copy</param>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamNanoEnd">
+            <summary>Stream end time</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamNanoStart">
+            <summary>Stream start time</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamProduct">
+            <summary>Product name</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamStorable">
+            <summary>Is stream storable?</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamConfigured">
+            <summary>Is stream configured?</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamCaptured">
+            <summary>Is stream captured?</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamCodec">
+            <summary>The stream codec type</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamSerialId">
+            <summary>The serial assigned by the resource</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStream.StreamId">
+            <summary>The stream id assigned by the data store</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryStream.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.QueryStream">
+            <summary>Simple structure to aid the querying of a stream</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryGroup.op_Assign(OxTS.NavLib.FileBased.QueryGroup)">
+            <summary>Assigment operator</summary>
+            <param name="copy">Object to copy</param>
+            <returns>Copy of <paramref name="copy" /></returns>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryGroup.GroupTag">
+            <summary>Group Tag assigned by the resource</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryGroup.GroupId">
+            <summary>Group Id assigned by the datastore</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryGroup.#ctor">
+            <summary>Default constrctor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.QueryGroup">
+            <summary>brief Simple structure to aid the querying of a group.</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryResource.op_Assign(OxTS.NavLib.FileBased.QueryResource)">
+            <summary>Assigment operator</summary>
+            <param name="copy">Object to copy</param>
+            <returns>Copy of <paramref name="copy" /></returns>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryResource.#ctor(OxTS.NavLib.FileBased.QueryResource)">
+            <summary>Copy constructor</summary>
+            <param name="copy">Object to copy</param>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceExtension">
+            <summary>Resource Extension</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceName">
+            <summary>Resource Name</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceTransport">
+            <summary>Resource transpport type</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryResource.ResourceId">
+            <summary>Resource Id assigned by the datastore</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryResource.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.QueryResource">
+            <summary>Simple structure to aid the querying of a resource.</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStore.Streams">
+            <summary>Number of streams in datastore</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStore.Groups">
+            <summary>Number of groups in datastore</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.QueryStore.Resources">
+            <summary>Number of resources in datastore</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.QueryStore.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.QueryStore">
+            <summary>Simple structure to aid the querying general properties of the data store.</summary>
+        </member>
+        <member name="F:OxTS.NavLib.Com.Meta.map">
+            <summary>Parsed meta data</summary>
+        </member>
+        <member name="F:OxTS.NavLib.Com.Meta.title">
+            <summary>Raw data component</summary>
+        </member>
+        <member name="F:OxTS.NavLib.Com.Meta.raw">
+            <summary>Raw data component</summary>
+        </member>
+        <member name="M:OxTS.NavLib.Com.Meta.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.Com.Meta">
+            <summary>Communication related classes</summary>
+            <summary>Ogg stream meta data</summary>
+        </member>
         <member name="F:OxTS.NavLib.Lib.Variable`1.flags">
             <summary>Flags indicating data validity</summary>
         </member>
@@ -2194,6 +2092,108 @@ Simple structure to aid the querying general properties of the data store</summa
         </member>
         <member name="T:OxTS.NavLib.Lib.StatusFlags">
             <summary>Status flag class</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.DestinationMeasurement.index">
+            <summary>Index into the original mesaurement</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.DestinationMeasurement.measurement">
+            <summary>Original measurement index</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DestinationMeasurement.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.DestinationMeasurement">
+            <summary>A simple structure allowing information of the interface array positions to be collected</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.AspectMeasurement.destination">
+            <summary>Destination position in the target structure</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.AspectMeasurement.dimension">
+            <summary>Dimension position in the target structure</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.AspectMeasurement.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.AspectMeasurement">
+            <summary>A simple structure allowing information of the interface array positions to be collected</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.StoreMeasurement.position">
+            <summary>Position in the store</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.StoreMeasurement.store_id">
+            <summary>The store id in the system</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.StoreMeasurement.system_id">
+            <summary>System id</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.StoreMeasurement.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.StoreMeasurement">
+            <summary>A simple structure allowing information of the interface array positions to be collected.</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.StreamMeasurement.stream_id">
+            <summary>Data store stream id</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.StreamMeasurement.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.StreamMeasurement">
+            <summary>A simple structure collecting various measurement information</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.DynamicMeasurement.is_array">
+            <summary>Is measurement an array?</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.DynamicMeasurement.type">
+            <summary>Basic type</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.DynamicMeasurement.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.DynamicMeasurement">
+            <summary>A simple structure collecting various measurement information</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.PointerMeasurement.category">
+            <summary>Data store category</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.PointerMeasurement.measurement_id">
+            <summary>Identification</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.PointerMeasurement.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.PointerMeasurement">
+            <summary>A simple structure collecting various measurement information</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_ang_sweep">
+            <summary>Default display parameters</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_ang_start">
+            <summary>Default display parameters</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_max">
+            <summary>Default display parameters</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.disp_min">
+            <summary>Default display parameters</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.comment">
+            <summary>comment (further measurement information)</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.unit">
+            <summary>unit</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.size">
+            <summary>size</summary>
+        </member>
+        <member name="F:OxTS.NavLib.FileBased.InfoMeasurement.tag">
+            <summary>Data store measurement name</summary>
+        </member>
+        <member name="M:OxTS.NavLib.FileBased.InfoMeasurement.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="T:OxTS.NavLib.FileBased.InfoMeasurement">
+            <summary>A simple structure collecting various measurement information</summary>
         </member>
         <member name="M:OxTS.NavLib.Util.EnumUtils.GetComment(System.Enum)">
             <summary>Get description</summary>

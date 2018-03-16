@@ -1,6 +1,7 @@
 ﻿using OxTS.NavLib.DataStoreManager.Interface;
 using OxTS.NavLib.PluginInterface;
 using System.ComponentModel.Composition;
+using System.Xml.Serialization;
 
 namespace NavLibWPFExample
 {
@@ -16,8 +17,10 @@ namespace NavLibWPFExample
 
             MainWindow.DataContext  = SelectUnitView;
             MainWindow.Visibility   = System.Windows.Visibility.Visible;
+            serialiser = new WPFExampleSerialiser();
         }
 
+        private IXmlSerializable serialiser;
         public MainWindow MainWindow { get; set; }
         public SelectUnitViewModel SelectUnitView { get; set; }
 
@@ -37,6 +40,8 @@ namespace NavLibWPFExample
                 return PluginTypes.Utility;
             }
         }
+
+        public IXmlSerializable Serialiser => serialiser;
 
         public void ConnectToDatastore(IRealTimeDataStoreManagerAsync rtds_man)
         {

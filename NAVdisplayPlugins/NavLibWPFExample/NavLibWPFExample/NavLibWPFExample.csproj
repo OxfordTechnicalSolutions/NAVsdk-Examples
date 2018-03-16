@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="ViewModels\MeasurementsObservable.cs" />
     <Compile Include="ViewModels\SelectUnitViewModel.cs" />
+    <Compile Include="WPFExampleSerialiser.cs" />
     <Compile Include="WpfPluginInitialiser.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
